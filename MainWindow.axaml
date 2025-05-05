@@ -1,0 +1,55 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="450"
+        x:Class="Sr1.MainWindow"
+        Title="Математичні обчислення">
+
+    <Grid RowDefinitions="Auto,*">
+        <TabControl Grid.Row="1">
+            <!-- Завдання 1 -->
+            <TabItem Header="Завдання 1">
+                <Grid Margin="20" RowDefinitions="Auto,Auto,Auto,Auto,Auto,*" ColumnDefinitions="Auto,*" VerticalAlignment="Top">
+                    <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" TextWrapping="Wrap" Margin="0,0,0,15" 
+                               Text="На заданому проміжку чисел [a,b] знайдіть кількість чисел, які кратні 29, парні і при діленні на 5 дають в остачі 2." />
+                    
+                    <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0" Text="Значення a:" />
+                    <TextBox Grid.Row="1" Grid.Column="1" Name="StartRangeA" Text="1" Margin="0,5" />
+                    
+                    <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0" Text="Значення b:" />
+                    <TextBox Grid.Row="2" Grid.Column="1" Name="EndRangeB" Text="1000" Margin="0,5" />
+                    
+                    <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Name="CalculateTask1Button"
+                            HorizontalAlignment="Center" Margin="0,15,0,15" Content="Обчислити" />
+                    
+                    <TextBlock Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0" Text="Результат:" />
+                    <TextBox Grid.Row="4" Grid.Column="1" Name="ResultTask1" IsReadOnly="True" Margin="0,5" />
+                </Grid>
+            </TabItem>
+            
+            <!-- Завдання 2 -->
+            <TabItem Header="Завдання 2">
+                <Grid Margin="20" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,*" ColumnDefinitions="Auto,*" VerticalAlignment="Top">
+                    <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" TextWrapping="Wrap" Margin="0,0,0,15"
+                               Text="Задано три числа. Якщо хоч одне з них додатне, то знайти квадрат суми. В іншому випадку – суму квадратів." />
+                    
+                    <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0" Text="Число 1:" />
+                    <TextBox Grid.Row="1" Grid.Column="1" Name="Number1" Text="0" Margin="0,5" />
+                    
+                    <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0" Text="Число 2:" />
+                    <TextBox Grid.Row="2" Grid.Column="1" Name="Number2" Text="0" Margin="0,5" />
+                    
+                    <TextBlock Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0" Text="Число 3:" />
+                    <TextBox Grid.Row="3" Grid.Column="1" Name="Number3" Text="0" Margin="0,5" />
+                    
+                    <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Name="CalculateTask2Button" 
+                            HorizontalAlignment="Center" Margin="0,15,0,15" Content="Обчислити" />
+                    
+                    <TextBlock Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0" Text="Результат:" />
+                    <TextBox Grid.Row="5" Grid.Column="1" Name="ResultTask2" IsReadOnly="True" Margin="0,5" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
